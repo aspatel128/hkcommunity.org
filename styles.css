@@ -123,6 +123,7 @@ a{ color: inherit; }
 }
 
 .donate-row{
+  margin-top: -6px;
   grid-column: 2;
   grid-row: 2;
   display: flex;
@@ -131,7 +132,7 @@ a{ color: inherit; }
 
 /* Bigger centered logo */
 .logo-img{
-  height: 84px;
+  height: 140px;
   width: auto;
   display: block;
 }
