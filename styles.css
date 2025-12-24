@@ -63,10 +63,11 @@ a{ color: inherit; }
 }
 
 .header-grid{
-  grid-template-columns: 1fr auto 1fr;
+  display: grid;
+  grid-template-columns: minmax(160px, 260px) auto minmax(160px, 260px);
   grid-template-rows: auto auto;
   align-items: center;
-  gap: 12px 20px;
+  gap: 12px 24px;
   padding: 16px 0;
 }
 
@@ -168,7 +169,7 @@ a{ color: inherit; }
 .nav{
   display:flex;
   align-items:center;
-  gap: 12px;
+  gap: 16px;
   flex-wrap: wrap;
   justify-content:flex-end;
 }
