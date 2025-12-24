@@ -57,22 +57,49 @@ a{ color: inherit; }
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line);
 }
+
 .topbar-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap: 16px;
-  padding: 14px 0;
+  display: grid;
 }
 
-/* Header layout: left nav | centered logo | right nav, with donate under logo */
 .header-grid{
-  display: grid;
   grid-template-columns: 1fr auto 1fr;
   grid-template-rows: auto auto;
   align-items: center;
-  gap: 10px 14px;
-  padding: 14px 0;
+  gap: 12px 20px;
+  padding: 16px 0;
+}
+
+/* Left nav */
+.nav-left{
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Center logo */
+.brand-center{
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Right nav */
+.nav-right{
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Donate row UNDER the logo */
+.donate-row{
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-left{
