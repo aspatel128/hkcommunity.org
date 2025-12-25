@@ -411,6 +411,69 @@ main > :first-child{
     gap: 14px;
   }
 
+  /* ===========================
+   DONATE PAGE — BETTER TILE SPACING
+   (Paste at the VERY BOTTOM of styles.css)
+   =========================== */
+
+/* More spacing between the donate tiles (uses your existing grid3 layout) */
+.donate-grid{
+  gap: 26px;          /* space BETWEEN tiles */
+  margin-top: 22px;   /* space ABOVE the tile grid */
+}
+
+/* More breathing room inside each tile */
+.donate-card{
+  padding: 26px;      /* bigger inner padding than your default .card (18px) */
+}
+
+/* Clean vertical rhythm inside each tile */
+.donate-card .card-top{
+  margin-bottom: 12px;
+}
+
+.donate-card p{
+  margin-top: 12px;   /* your .card p is 10px top; this loosens it */
+  margin-bottom: 0;
+}
+
+/* Space around buttons inside donate tiles */
+.donate-card .btn{
+  margin-top: 18px;
+}
+
+/* If a donate tile has multiple buttons (Cash App card), space them nicely */
+.donate-card .btn + .btn{
+  margin-top: 12px;
+}
+
+/* Give your Cash App panel more space (if you use <div class="panel"> inside donate tiles) */
+.donate-card .panel{
+  margin-top: 14px;
+  margin-bottom: 18px;
+}
+
+/* OPTIONAL: equal-height tiles feel more premium.
+   This will NOT break anything if you want it. */
+.donate-card{
+  display: flex;
+  flex-direction: column;
+}
+.donate-card .btn.full{
+  margin-top: auto;  /* pushes the main button down so tiles align */
+}
+
+/* Mobile tweaks */
+@media (max-width: 980px){
+  .donate-grid{
+    gap: 20px;
+  }
+  .donate-card{
+    padding: 22px;
+  }
+}
+
+
   .logo-img{ height: 100px; }
   .nav{ gap: 16px; }
 }
