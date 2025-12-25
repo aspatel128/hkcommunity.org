@@ -86,6 +86,25 @@ a{ color: inherit; }
   gap: 18px;
 }
 
+/* Make header consistent across ALL pages */
+.topbar{
+  background: #fff;                 /* avoids weird transparency on banners */
+  backdrop-filter: none;            /* prevents banner/hero blur oddities */
+}
+
+.header-grid{
+  min-height: 96px;                 /* consistent header height */
+}
+
+/* If a page starts with a hero/banner, prevent any overlap or weird gap */
+main > :first-child{
+  margin-top: 0 !important;
+}
+.hero{
+  margin-top: 0 !important;
+}
+
+
 /* Logo left */
 .brand-center{
   grid-column: 1;
