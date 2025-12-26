@@ -653,7 +653,7 @@ a{ color: inherit; text-decoration: none; }
 
 .t-img {
   width: 100%;
-  max-width: 420px;   /* 👈 controls image size */
+  max-width: 280px;   /* 👈 controls image size */
   height: auto;
   display: block;
   border-radius: 8px; /* optional, remove if you want sharp corners */
