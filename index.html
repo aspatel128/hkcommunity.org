@@ -6,7 +6,7 @@
     <title>Hiraben Kodarbhai Foundation</title>
     <meta
       name="description"
-      content="Legacy in action. Community first. Supporting local communities through care, service and shared opportunity."
+      content="Legacy in action. Community first. Supporting local communities through care, service, and shared opportunity."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -14,156 +14,229 @@
   <body>
     <a class="skip" href="#main">Skip to content</a>
 
-    <!-- NAV (beige bar with navy buttons + centered logo) -->
-    <header class="site-header" aria-label="Site header">
+    <!-- NAV -->
+    <header class="topbar">
       <div class="wrap nav-inner">
         <nav class="nav-left" aria-label="Primary left">
-          <a class="nav-btn" href="stories.html">Story</a>
-          <a class="nav-btn" href="impact.html">Impact</a>
+          <a href="index.html" class="active">Home</a>
+          <a href="impact.html">Impact</a>
         </nav>
 
         <a class="logo" href="index.html" aria-label="HK Foundation Home">
-          <!-- Replace with your real logo path -->
-          <img src="logo.png" alt="HK Foundation logo" />
+          <!-- Replace logo.png with your logo file -->
+          <img src="logo.png" alt="Hiraben Kodarbhai Foundation logo" />
         </a>
 
-        <nav class="nav-right" aria-label="Primary right">
-          <a class="nav-btn" href="contact.html">Contact</a>
-          <a class="nav-btn" href="donate.html">Donate</a>
-        </nav>
+        <div class="nav-right">
+          <nav class="nav-right-links" aria-label="Primary right">
+            <a href="focus-areas.html">Focus Areas</a>
+            <a href="stories.html">Stories</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <a class="btn btn-donate" href="donate.html">Donate</a>
+        </div>
       </div>
     </header>
 
     <main id="main">
-      <!-- HERO (large photo + subtle dark overlay + centered headline + donate button) -->
+      <!-- HERO -->
       <section class="hero" aria-label="Hero">
+        <div class="hero-media" aria-hidden="true"></div>
         <div class="hero-overlay" aria-hidden="true"></div>
 
-        <div class="wrap hero-content">
-          <h1>Give back with us</h1>
-          <p class="hero-sub">
-            Together, we uplift communities through care, service and shared opportunity.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn-primary" href="donate.html">Donate</a>
-            <a class="btn-outline" href="impact.html">Learn more</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- MISSION (large serif line with red highlights on key words) -->
-      <section class="mission" aria-label="Mission">
-        <div class="wrap mission-inner">
-          <p class="mission-text">
-            Our mission is to <span class="accent">uplift</span> and
-            <span class="accent">support</span> our local communities, continuing the legacy of
-            <span class="accent">service</span> and <span class="accent">care</span> our
-            grandparents showed in theirs.
-          </p>
-        </div>
-      </section>
-
-      <!-- GOALS (three columns with thin blue dividers + image + title + text) -->
-      <section class="goals" aria-label="Goals">
-        <div class="wrap">
-          <h2 class="section-title">Our goals</h2>
-
-          <div class="goals-grid" role="list">
-            <article class="goal-card" role="listitem">
-              <div class="goal-img">
-                <!-- Replace with your own -->
-                <img
-                  src="https://images.unsplash.com/photo-1546551613-09d7e0bafc34?auto=format&fit=crop&w=1200&q=70"
-                  alt="Children enjoying a meal together"
-                />
-              </div>
-              <h3>Scholarship</h3>
-              <p>
-                We aim to establish yearly scholarships that support deserving students in pursuing
-                their dreams and achieving academic success. We believe in the power of education to
-                change lives.
-              </p>
-            </article>
-
-            <article class="goal-card" role="listitem">
-              <div class="goal-img">
-                <img
-                  src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?auto=format&fit=crop&w=1200&q=70"
-                  alt="Decorative rangoli created for a community festival"
-                />
-              </div>
-              <h3>Fundraising</h3>
-              <p>
-                We host fundraising events throughout the year to support community projects and
-                initiatives. These events engage local residents and promote awareness of
-                challenges facing our communities.
-              </p>
-            </article>
-
-            <article class="goal-card" role="listitem">
-              <div class="goal-img">
-                <img
-                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=70"
-                  alt="Women gathered together sharing a meal"
-                />
-              </div>
-              <h3>Community impact</h3>
-              <p>
-                Through future initiatives, we intend to improve the quality of life in our
-                communities. By identifying local needs and opportunities, we aim to create lasting,
-                meaningful impact.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- EVENTS (simple centered bar like the Wix template) -->
-      <section class="events" aria-label="Events">
-        <div class="wrap">
-          <div class="events-box">No events at the moment</div>
-        </div>
-      </section>
-
-      <!-- FOOTER (3-column layout, links on the right, contact on the left) -->
-      <footer class="site-footer" aria-label="Footer">
-        <div class="wrap footer-grid">
-          <div class="footer-col">
-            <h3 class="footer-title">Hiraben Kodarbhai Foundation</h3>
-            <p class="footer-item">123-456-7890</p>
-            <p class="footer-item">
-              <a href="mailto:info@example.com">info@example.com</a>
+        <div class="wrap hero-inner">
+          <div class="hero-content">
+            <p class="kicker">Legacy in action. Community first.</p>
+            <h1>Hiraben Kodarbhai Foundation</h1>
+            <p class="lead">
+              Built on the kindness our grandparents showed, we give back by supporting local
+              communities through care, service, and shared opportunity.
             </p>
-          </div>
 
-          <div class="footer-col">
-            <p class="footer-item">Ohio Ave &amp; N Iowa St,</p>
-            <p class="footer-item">Gunnison, CO 81230, USA</p>
-
-            <div class="social">
-              <a href="#" aria-label="Facebook">Facebook</a>
-              <a href="#" aria-label="Instagram">Instagram</a>
-              <a href="#" aria-label="TikTok">TikTok</a>
+            <div class="hero-actions">
+              <a class="btn" href="donate.html">Donate</a>
+              <a class="btn btn-outline" href="focus-areas.html">Learn More</a>
             </div>
           </div>
 
-          <div class="footer-col footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Accessibility Statement</a>
-            <a href="#">Terms &amp; Conditions</a>
-            <a href="#">Refund Policy</a>
+          <aside class="hero-card" aria-label="Quick overview">
+            <div class="panel">
+              <h2>Our Mission</h2>
+              <p class="mission">
+                Our mission is to aid our local communities like our grandparents did theirs.
+              </p>
+              <div class="divider"></div>
+              <ul class="bullets">
+                <li>Support local families through direct help</li>
+                <li>Strengthen youth and education initiatives</li>
+                <li>Fund community-driven projects and partnerships</li>
+              </ul>
+              <a class="btn btn-full" href="impact.html">See Our Impact</a>
+              <p class="fine">Serving communities across Iowa and Ohio.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- MISSION / STATEMENT SECTION -->
+      <section class="section section-cream">
+        <div class="wrap">
+          <header class="section-head">
+            <h2>Our mission is simple</h2>
+            <div class="accent-bar" aria-hidden="true"></div>
+            <p>
+              We focus on practical support, consistent involvement, and real partnerships that uplift
+              families and communities.
+            </p>
+          </header>
+
+          <div class="split">
+            <div class="split-card">
+              <h3>We believe</h3>
+              <p>
+                Giving should be local, human, and repeatable — not performative. We support
+                initiatives that meet real needs and build long-term stability.
+              </p>
+            </div>
+
+            <div class="split-card">
+              <h3>We commit</h3>
+              <p>
+                To showing up: with time, resources, and care — helping communities grow stronger
+                through service, opportunity, and trust.
+              </p>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="wrap footer-bottom">
-          <small>© <span id="y"></span> by Hiraben Kodarbhai Foundation. All rights reserved.</small>
+      <!-- OUR GOALS (TILES) -->
+      <section class="section section-soft">
+        <div class="wrap">
+          <header class="section-head">
+            <h2>Our Goals</h2>
+            <div class="accent-bar" aria-hidden="true"></div>
+            <p>Three focus pillars that guide our giving and projects.</p>
+          </header>
+
+          <div class="tiles goals-tiles">
+            <article class="tile">
+              <div class="tile-img">
+                <!-- Replace with your image -->
+                <img
+                  src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=1600&q=80"
+                  alt="Community support"
+                  loading="lazy"
+                />
+              </div>
+              <div class="tile-body">
+                <h3>Community Support</h3>
+                <p>
+                  Practical support through trusted community partners and local initiatives that help
+                  families right now.
+                </p>
+              </div>
+            </article>
+
+            <article class="tile">
+              <div class="tile-img">
+                <!-- Replace with your image -->
+                <img
+                  src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1600&q=80"
+                  alt="Youth and education"
+                  loading="lazy"
+                />
+              </div>
+              <div class="tile-body">
+                <h3>Youth & Education</h3>
+                <p>
+                  Support for students, programs, and mentorship that opens doors long-term and builds
+                  opportunity.
+                </p>
+              </div>
+            </article>
+
+            <article class="tile">
+              <div class="tile-img">
+                <!-- Replace with your image -->
+                <img
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80"
+                  alt="Community projects"
+                  loading="lazy"
+                />
+              </div>
+              <div class="tile-body">
+                <h3>Community Projects</h3>
+                <p>
+                  Projects and partnerships that strengthen neighborhoods and bring people together
+                  around shared goals.
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <script>
-          document.getElementById("y").textContent = new Date().getFullYear();
-        </script>
-      </footer>
+      <!-- EVENTS -->
+      <section class="section section-cream">
+        <div class="wrap">
+          <header class="section-head">
+            <h2>Events</h2>
+            <div class="accent-bar" aria-hidden="true"></div>
+            <p>Ways to participate and support the community.</p>
+          </header>
+
+          <div class="events">
+            <div class="event-card">
+              <h3>No events at the moment</h3>
+              <p class="muted">
+                We’re planning our next fundraiser and volunteer opportunities — check back soon.
+              </p>
+              <a class="btn btn-outline" href="contact.html">Get Notified</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER CONTACT STRIP -->
+      <section class="footer-top">
+        <div class="wrap footer-grid">
+          <div class="footer-box">
+            <h3>Contact</h3>
+            <p class="muted">
+              Email: <a href="mailto:hello@hkfoundation.org">hello@hkfoundation.org</a><br />
+              Phone: <a href="tel:+10000000000">(000) 000-0000</a>
+            </p>
+          </div>
+
+          <div class="footer-box">
+            <h3>Location</h3>
+            <p class="muted">
+              Serving communities across Iowa and Ohio.<br />
+              (Add your mailing address if you want.)
+            </p>
+          </div>
+
+          <div class="footer-box">
+            <h3>Policies</h3>
+            <p class="muted">
+              <a href="#">Privacy Policy</a><br />
+              <a href="#">Terms & Conditions</a>
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <div class="wrap footer-bottom">
+        <p class="fine">© <span id="y"></span> Hiraben Kodarbhai Foundation. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Year
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
