@@ -1,133 +1,189 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hiraben Kodarbhai Foundation</title>
-  <meta name="description" content="Legacy in action. Community first. Supporting local communities through care, service, and shared opportunity." />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hiraben Kodarbhai Foundation</title>
+    <meta
+      name="description"
+      content="Legacy in action. Community first. Supporting local communities through care and service and shared opportunity."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<header class="topbar">
-  <div class="wrap">
-    <div class="header-grid">
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
 
-      <div class="brand-center">
-        <a href="index.html" aria-label="HK Foundation Home">
-          <img class="logo-img" src="logo.png" alt="HK Foundation logo" />
-        </a>
-      </div>
-
-      <div class="nav-right">
-        <nav class="nav" aria-label="Primary">
-          <a href="impact.html">Impact</a>
-          <a href="focus-areas.html">Focus Areas</a>
-          <a href="stories.html">Stories</a>
-          <a href="contact.html">Contact</a>
+    <!-- NAV (beige bar with navy buttons + centered logo) -->
+    <header class="site-header" aria-label="Site header">
+      <div class="wrap nav-inner">
+        <nav class="nav-left" aria-label="Primary left">
+          <a class="nav-btn" href="stories.html">Story</a>
+          <a class="nav-btn" href="impact.html">Impact</a>
         </nav>
 
-        <a class="btn btn-donate" href="donate.html">Donate</a>
+        <a class="logo" href="index.html" aria-label="HK Foundation Home">
+          <img src="logo.png" alt="HK Foundation logo" />
+        </a>
+
+        <nav class="nav-right" aria-label="Primary right">
+          <a class="nav-btn" href="contact.html">Contact</a>
+          <a class="nav-btn" href="donate.html">Donate</a>
+        </nav>
       </div>
+    </header>
 
-    </div>
-  </div>
-</header>
+    <main id="main">
+      <!-- HERO (large photo + subtle dark overlay + centered headline + donate button) -->
+      <section class="hero" aria-label="Hero">
+        <div class="hero-overlay" aria-hidden="true"></div>
 
-  <main id="main">
-    <section class="hero" aria-label="Hero">
-      <div class="hero-overlay"></div>
-      <div class="wrap hero-inner">
-        <div class="hero-copy">
-          <div class="breadcrumb">Foundation / Home</div>
-          <h1>Legacy in action. Community first.</h1>
-          <p class="lead">
-            Built on the kindness our grandparents showed, we give back by supporting local communities
-            through care, service, and shared opportunity.
+        <div class="wrap hero-content">
+          <h1>Give back with us</h1>
+          <p class="hero-sub">
+            Together, we uplift communities through care, service and shared opportunity.
           </p>
+
           <div class="hero-actions">
-            <a class="btn" href="donate.html">Donate today</a>
-            <a class="btn outline" href="focus-areas.html">Learn more</a>
+            <a class="btn-primary" href="donate.html">Donate</a>
+            <a class="btn-outline" href="impact.html">Learn more</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- MISSION (large serif line with red highlights on key words) -->
+      <section class="mission" aria-label="Mission">
+        <div class="wrap mission-inner">
+          <p class="mission-text">
+            Our mission is to <span class="accent">uplift</span> and
+            <span class="accent">support</span> our local communities, continuing the legacy of
+            <span class="accent">service</span> and <span class="accent">care</span> our
+            grandparents showed in theirs.
+          </p>
+        </div>
+      </section>
+
+      <!-- GOALS (tiles + cropped images + soft accent bar + animation) -->
+      <section class="goals" aria-label="Goals">
+        <div class="wrap">
+          <!-- Soft accent bar is handled by CSS on .goals -->
+          <h2 class="section-title reveal">Our goals</h2>
+
+          <div class="goals-grid" role="list">
+            <article class="goal-card reveal" role="listitem">
+              <div class="goal-img">
+                <img
+                  src="https://images.unsplash.com/photo-1546551613-09d7e0bafc34?auto=format&fit=crop&w=1200&q=70"
+                  alt="Children enjoying a meal together"
+                />
+              </div>
+              <h3>Scholarship</h3>
+              <p>
+                We aim to establish yearly scholarships that support deserving students in pursuing
+                their dreams and achieving academic success. We believe in the power of education to
+                change lives.
+              </p>
+            </article>
+
+            <article class="goal-card reveal" role="listitem">
+              <div class="goal-img">
+                <img
+                  src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?auto=format&fit=crop&w=1200&q=70"
+                  alt="Decorative rangoli created for a community festival"
+                />
+              </div>
+              <h3>Fundraising</h3>
+              <p>
+                We host fundraising events throughout the year to support community projects and
+                initiatives. These events engage local residents and promote awareness of
+                challenges facing our communities.
+              </p>
+            </article>
+
+            <article class="goal-card reveal" role="listitem">
+              <div class="goal-img">
+                <img
+                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=70"
+                  alt="Women gathered together sharing a meal"
+                />
+              </div>
+              <h3>Community impact</h3>
+              <p>
+                Through future initiatives, we intend to improve the quality of life in our
+                communities. By identifying local needs and opportunities, we aim to create lasting,
+                meaningful impact.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- EVENTS (simple centered bar like the Wix template) -->
+      <section class="events" aria-label="Events">
+        <div class="wrap">
+          <div class="events-box reveal">No events at the moment</div>
+        </div>
+      </section>
+
+      <!-- FOOTER (3-column layout, links on the right, contact on the left) -->
+      <footer class="site-footer" aria-label="Footer">
+        <div class="wrap footer-grid">
+          <div class="footer-col">
+            <h3 class="footer-title">Hiraben Kodarbhai Foundation</h3>
+            <p class="footer-item">123-456-7890</p>
+            <p class="footer-item">
+              <a href="mailto:info@example.com">info@example.com</a>
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <p class="footer-item">Ohio Ave &amp; N Iowa St,</p>
+            <p class="footer-item">Gunnison, CO 81230, USA</p>
+
+            <div class="social">
+              <a href="#" aria-label="Facebook">Facebook</a>
+              <a href="#" aria-label="Instagram">Instagram</a>
+              <a href="#" aria-label="TikTok">TikTok</a>
+            </div>
+          </div>
+
+          <div class="footer-col footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Accessibility Statement</a>
+            <a href="#">Terms &amp; Conditions</a>
+            <a href="#">Refund Policy</a>
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="Quick overview">
-          <div class="panel">
-            <h2>What we do</h2>
-            <ul class="bullets">
-              <li>Support local families through direct community help</li>
-              <li>Strengthen youth and education initiatives</li>
-              <li>Fund community driven projects and partnerships</li>
-              <li>Keep giving local, practical, and consistent</li>
-            </ul>
-            <a class="btn full" href="impact.html">See our impact</a>
-            <p class="fine">We operate across local communities in Iowa and Ohio.</p>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>How we create impact</h2>
-          <p>Clear focus areas help donors and partners understand where support goes.</p>
+        <div class="wrap footer-bottom">
+          <small>© <span id="y"></span> by Hiraben Kodarbhai Foundation. All rights reserved.</small>
         </div>
 
-        <!-- softer accent bar -->
-        <div class="accent-bar" aria-hidden="true"></div>
+        <script>
+          // year
+          document.getElementById("y").textContent = new Date().getFullYear();
 
-        <div class="grid3 reveal">
-          <article class="card">
-            <div class="card-top">
-              <div class="chip">Care</div>
-              <h3>Community support</h3>
-            </div>
-            <p>Practical support through trusted community partners and local initiatives.</p>
-          </article>
-
-          <article class="card">
-            <div class="card-top">
-              <div class="chip">Opportunity</div>
-              <h3>Youth and education</h3>
-            </div>
-            <p>Support for students, programs, and mentorship that open doors long term.</p>
-          </article>
-
-          <article class="card">
-            <div class="card-top">
-              <div class="chip">Service</div>
-              <h3>Community projects</h3>
-            </div>
-            <p>Projects and partnerships that strengthen neighborhoods and bring people together.</p>
-          </article>
-        </div>
-
-        <div class="cta-band reveal">
-          <div>
-            <div class="cta-title">Want to help build something meaningful locally?</div>
-            <div class="cta-sub">Donate, volunteer, or partner with us.</div>
-          </div>
-          <a class="btn" href="contact.html">Get involved</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- OUR GOALS (tiles, cropped images) -->
-    <section class="section alt">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Our goals</h2>
-          <p>We focus on practical, consistent giving that strengthens local communities.</p>
-        </div>
-
-        <div class="accent-bar" aria-hidden="true"></div>
-
-        <div class="goal-tiles reveal">
-          <article class="goal-tile">
-            <div class="goal-media">
-              <img src="images/goal-1.jpg" alt="Community support initiative" />
-            </div>
-            <div class="goal-body">
-              <h3>Community support</h3
+          // reveal animations (tiny + safe)
+          const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (!prefersReduced) {
+            const els = document.querySelectorAll(".reveal");
+            const io = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((e) => {
+                  if (e.isIntersecting) {
+                    e.target.classList.add("is-in");
+                    io.unobserve(e.target);
+                  }
+                });
+              },
+              { threshold: 0.12 }
+            );
+            els.forEach((el) => io.observe(el));
+          } else {
+            document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-in"));
+          }
+        </script>
+      </footer>
+    </main>
+  </body>
+</html>
