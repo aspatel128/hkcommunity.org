@@ -719,14 +719,14 @@ a{ color: inherit; text-decoration: none; }
   margin: 0.75rem auto 1rem;
 }
 
-/* Contact page: force 2x2 grid for people */
-.goals-grid {
+/* CONTACT PAGE ONLY — force 2x2 grid */
+.contact-page .goals-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-/* Mobile: stack nicely */
+/* Mobile fallback */
 @media (max-width: 720px) {
-  .goals-grid {
+  .contact-page .goals-grid {
     grid-template-columns: 1fr;
   }
 }
