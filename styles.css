@@ -1,778 +1,157 @@
-:root{
-  /* Brand */
-  --navy: #0b1b3a;
-  --navy-2: #1d2f58;
-  --cream: #f6f1e7;
-  --cream-2: #fbf7ef;
-  --line: rgba(11,27,58,.16);
-
-  /* Accent */
-  --accent: #c44a3d;          /* warm red for mission highlights */
-  --softbar: #efe6d6;         /* softer accent band */
-
-  /* Text */
-  --text: #141414;
-  --muted: rgba(20,20,20,.72);
-
-  /* Layout */
-  --wrap: 1120px;
-  --radius: 18px;
-  --radius-btn: 18px;         /* rounder buttons */
-  --shadow: 0 14px 40px rgba(11,27,58,.10);
-  --shadow2: 0 10px 26px rgba(11,27,58,.08);
-}
-
-/* ===========================
-   RESET
-   =========================== */
-*{ box-sizing:border-box; }
-html,body{ margin:0; padding:0; }
-img{ max-width:100%; display:block; }
-
-body{
-  background: var(--cream-2);
-  color: var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.6;
-}
-
-.wrap{ max-width: var(--wrap); margin: 0 auto; padding: 0 22px; }
-a{ color: inherit; text-decoration: none; }
-
-/* Skip link */
-.skip{
-  position:absolute;
-  left:-999px;
-  top:12px;
-  background:#000;
-  color:#fff;
-  padding:10px 12px;
-  border-radius: 12px;
-  text-decoration:none;
-}
-.skip:focus{ left:12px; z-index:999; }
-
-/* ===========================
-   NAV
-   =========================== */
-.site-header{
-  background: var(--cream);
-  border-bottom: 1px solid var(--line);
-}
-
-.nav-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding: 16px 0;
-  gap: 18px;
-}
-
-/* make logo centered between equal nav groups */
-.nav-left, .nav-right{
-  display:flex;
-  gap: 14px;
-  flex: 1;
-}
-.nav-left{ justify-content:flex-end; }
-.nav-right{ justify-content:flex-start; }
-
-.logo{
-  flex: 0 0 auto;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin: 0 18px;
-}
-
-/* bigger logo (per your request) */
-.logo img{
-  height: 175px; /* was smaller; adjust if you want more */
-  width: auto;
-}
-
-/* nav buttons (rounder) */
-.nav-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding: 11px 16px;
-  border-radius: var(--radius-btn);
-  background: var(--navy);
-  color: #fff;
-  font-weight: 800;
-  font-size: 14px;
-  letter-spacing: .02em;
-  border: 1px solid rgba(255,255,255,.16);
-  box-shadow: 0 10px 22px rgba(11,27,58,.10);
-  transition: transform .15s ease, filter .15s ease;
-}
-.nav-btn:hover{ filter: brightness(1.03); transform: translateY(-1px); }
-.nav-btn:active{ transform: translateY(0); }
-
-/* ===========================
-   HERO
-   =========================== */
-.hero{
-  position: relative;
-  min-height: 520px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-
-  background-image:
-    url("homepage.jpg");
-  background-size: cover;
-  background-position: center;
-  border-bottom: 1px solid var(--line);
-}
-
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background: linear-gradient(to bottom, rgba(0,0,0,.42), rgba(0,0,0,.55));
-}
-
-.hero-content{
-  position: relative;
-  z-index: 2;
-  color: #fff;
-  padding: 72px 0;
-  max-width: 820px;
-}
-
-.hero h1{
-  margin: 0 0 10px;
-  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
-  font-size: clamp(40px, 5vw, 64px);
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-}
-
-.hero-sub{
-  margin: 0 auto 20px;
-  max-width: 58ch;
-  font-size: 18px;
-  color: rgba(255,255,255,.90);
-}
-
-.hero-actions{
-  display:flex;
-  gap: 12px;
-  justify-content:center;
-  flex-wrap: wrap;
-}
-
-/* Buttons */
-.btn-primary, .btn-outline{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding: 12px 20px;
-  border-radius: var(--radius-btn);
-  font-weight: 900;
-  font-size: 14px;
-  letter-spacing: .02em;
-  border: 1px solid transparent;
-  transition: transform .15s ease, filter .15s ease, background .15s ease;
-}
-
-.btn-primary{
-  background: var(--navy);
-  color:#fff;
-  box-shadow: var(--shadow2);
-}
-.btn-primary:hover{ filter: brightness(1.05); transform: translateY(-1px); }
-.btn-primary:active{ transform: translateY(0); }
-
-.btn-outline{
-  background: rgba(255,255,255,.92);
-  color: var(--navy);
-  border-color: rgba(255,255,255,.55);
-}
-.btn-outline:hover{ filter: brightness(1.02); transform: translateY(-1px); }
-.btn-outline:active{ transform: translateY(0); }
-
-/* ===========================
-   MISSION
-   =========================== */
-.mission{
-  background: var(--cream-2);
-  padding: 52px 0 30px;
-}
-
-.mission-inner{
-  border-top: 1px solid rgba(11,27,58,.10);
-  padding-top: 28px;
-}
-
-.mission-text{
-  margin: 0;
-  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
-  font-size: clamp(22px, 2.4vw, 34px);
-  line-height: 1.25;
-  color: var(--navy);
-  letter-spacing: -0.01em;
-}
-
-.accent{
-  color: var(--accent);
-  font-weight: 800;
-}
-
-/* ===========================
-   GOALS (TILES + CROPPED IMAGES + SOFT ACCENT BAR + HOVER)
-   =========================== */
-.goals{
-  padding: 44px 0 54px;
-  /* softer accent bar feel */
-  background:
- var(--cream-2);
-}
-
-.section-title{
-  margin: 0 0 18px;
-  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
-  font-size: 34px;
-  color: var(--navy);
-  letter-spacing: -0.02em;
-}
-
-/* Tiles layout */
-.goals-grid{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-/* Tile card */
-.goal-card{
-  background: #fff;
-  border: 1px solid rgba(11,27,58,.14);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow2);
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-.goal-card:hover{
-  transform: translateY(-4px);
-  box-shadow: var(--shadow);
-}
-
-.goal-img{
-  width: 100%;
-  height: 190px;          /* consistent crop */
-  overflow: hidden;
-  background: #e9e4d9;
-}
-.goal-img img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;      /* KEY: same crop size */
-  object-position: center;
-}
-
-.goal-card h3{
-  margin: 14px 16px 6px;
-  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
-  font-size: 22px;
-  color: var(--navy);
-  letter-spacing: -0.01em;
-}
-
-.goal-card p{
-  margin: 0 16px 16px;
-  color: var(--muted);
-  font-size: 14.5px;
-}
-
-/* ===========================
-   EVENTS
-   =========================== */
-.events{
-  padding: 18px 0 58px;
-}
-
-.events-box{
-  background: var(--cream);
-  border: 1px solid rgba(11,27,58,.14);
-  border-radius: 14px;
-  padding: 16px 18px;
-  text-align:center;
-  color: var(--navy);
-  font-weight: 700;
-}
-
-/* ===========================
-   FOOTER
-   =========================== */
-.site-footer{
-  background: var(--cream);
-  border-top: 1px solid var(--line);
-  padding: 34px 0 22px;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.footer-title{
-  margin: 0 0 10px;
-  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
-  color: var(--navy);
-  font-size: 20px;
-}
-
-.footer-item{
-  margin: 6px 0;
-  color: rgba(11,27,58,.86);
-  font-size: 14px;
-}
-
-.footer-item a{ text-decoration: underline; text-underline-offset: 4px; }
-
-.social{
-  display:flex;
-  gap: 12px;
-  margin-top: 10px;
-  flex-wrap: wrap;
-}
-.social a{
-  color: var(--navy);
-  font-weight: 800;
-  font-size: 13px;
-  text-decoration: underline;
-  text-underline-offset: 5px;
-}
-
-.footer-links{
-  display:flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-end;
-}
-.footer-links a{
-  color: var(--navy);
-  font-weight: 800;
-  font-size: 13px;
-  text-decoration: underline;
-  text-underline-offset: 5px;
-}
-
-.footer-bottom{
-  margin-top: 18px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(11,27,58,.12);
-  color: rgba(11,27,58,.72);
-  font-size: 13px;
-}
-
-/* ===========================
-   REVEAL ANIMATIONS
-   =========================== */
-.reveal{
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity .65s ease, transform .65s ease;
-}
-.reveal.is-in{
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===========================
-   RESPONSIVE
-   =========================== */
-@media (max-width: 980px){
-  .goals-grid{ grid-template-columns: 1fr; }
-  .footer-grid{ grid-template-columns: 1fr; }
-  .footer-links{ align-items: flex-start; }
-  .nav-left, .nav-right{ gap: 10px; }
-}
-
-@media (max-width: 720px){
-  .nav-inner{
-    flex-direction: column;
-    gap: 12px;
-    padding: 14px 0 18px;
-  }
-  .nav-left, .nav-right{
-    flex: 0 0 auto;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .logo{ margin: 6px 0; }
-  .logo img{ height: 88px; }
-
-  .hero-content{ padding: 62px 0; }
-  .hero-sub{ font-size: 16px; }
-}
-
-/* ==========================
-   STORIES TIMELINE (NEW)
-   ========================== */
-
-.timeline-head{
-  background: #efe6d5;
-  border-bottom: 1px solid rgba(1,20,62,.12);
-  padding: 34px 0 22px;
-}
-
-.page-title{
-  margin: 0 0 8px;
-  font-family: Georgia, "Times New Roman", serif;
-  color: #01143e;
-  font-size: clamp(30px, 4vw, 44px);
-  letter-spacing: -0.02em;
-}
-
-.page-sub{
-  margin: 0;
-  max-width: 70ch;
-  color: rgba(1,20,62,.75);
-  font-size: 16px;
-}
-
-.timeline{
-  background: #fff;
-  padding: 42px 0 54px;
-}
-
-/* vertical line */
-.timeline-list{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-.timeline-list::before{
-  content:"";
-  position: absolute;
-  left: 16px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: rgba(1,20,62,.18);
-}
-
-.timeline-item{
-  position: relative;
-  display: grid;
-  grid-template-columns: 48px 1fr;
-  gap: 14px;
-  padding: 0 0 18px;
-}
-
-.tl-dot{
-  width: 12px;
-  height: 12px;
-  border-radius: 999px;
-  background: #b11226; /* accent red */
-  position: relative;
-  left: 11px;
-  top: 18px;
-  box-shadow: 0 0 0 6px rgba(177,18,38,.10);
-}
-
-.tl-card{
-  border: 1px solid rgba(1,20,62,.14);
-  border-radius: 18px;
-  padding: 16px 18px;
-  background: #fff;
-  box-shadow: 0 10px 28px rgba(1,20,62,.08);
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-
-.tl-card:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 18px 50px rgba(1,20,62,.12);
-}
-
-.tl-meta{
-  font-size: 12px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: rgba(1,20,62,.55);
-  margin-bottom: 6px;
-}
-
-.tl-title{
-  margin: 0 0 8px;
-  font-family: Georgia, "Times New Roman", serif;
-  color: #01143e;
-  font-size: 20px;
-  letter-spacing: -0.01em;
-}
-
-.tl-text{
-  margin: 0 0 10px;
-  color: rgba(1,20,62,.72);
-}
-
-.tl-link{
-  color: #01143e;
-  font-weight: 800;
-  text-decoration: none;
-  border-bottom: 2px solid rgba(177,18,38,.35);
-  padding-bottom: 2px;
-}
-
-.tl-link:hover{
-  border-bottom-color: rgba(177,18,38,.75);
-}
-
-/* CTA bar */
-.timeline-cta{
-  margin-top: 24px;
-  background: #efe6d5;
-  border: 1px solid rgba(1,20,62,.14);
-  border-radius: 20px;
-  padding: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-}
-
-/* Responsive */
-@media (max-width: 720px){
-  .timeline-list::before{ left: 14px; }
-  .timeline-item{ grid-template-columns: 42px 1fr; }
-  .timeline-cta{ flex-direction: column; align-items: flex-start; }
-}
-
-/* =========================
-   STORIES: PAGE HERO + TIMELINE
-   (Safe additions — does not rewrite existing styles)
-   ========================= */
-
-.page-hero{
-  background: #efe6d5;          /* same warm band vibe */
-  border-bottom: 1px solid rgba(0,0,0,.08);
-  padding: 40px 0;
-}
-
-.page-hero-inner h1{
-  margin: 0 0 8px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: clamp(34px, 4vw, 50px);
-  color: #0b2c55;
-  letter-spacing: -0.02em;
-}
-
-.page-hero-sub{
-  margin: 0;
-  max-width: 70ch;
-  color: rgba(0,0,0,.72);
-  font-size: 16px;
-}
-
-/* Timeline wrapper */
-.timeline-section{
-  padding: 46px 0 60px;
-  background: #fff;
-}
-
-.timeline{
-  position: relative;
-  margin-top: 10px;
-  padding-left: 22px;
-}
-
-/* Vertical line */
-.timeline::before{
-  content:"";
-  position:absolute;
-  left: 9px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: rgba(11,44,85,.18);
-  border-radius: 2px;
-}
-
-.t-item{
-  position: relative;
-  display: grid;
-  grid-template-columns: 22px 1fr;
-  gap: 16px;
-  padding: 14px 0;
-}
-
-/* Dot */
-.t-marker{
-  width: 18px;
-  height: 18px;
-  margin-top: 8px;
-  border-radius: 999px;
-  background: #0b2c55;
-  box-shadow: 0 0 0 4px rgba(11,44,85,.12);
-}
-
-/* Card */
-.t-card{
-  background: #fbf7ee;
-  border: 1px solid rgba(0,0,0,.08);
-  border-radius: 18px;
-  padding: 18px 18px 16px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.06);
-}
-
-.t-date{
-  display: inline-block;
-  font-weight: 800;
-  color: rgba(11,44,85,.92);
-  background: rgba(11,44,85,.08);
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-  letter-spacing: .02em;
-  margin-bottom: 10px;
-}
-
-.t-title{
-  margin: 0 0 8px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #0b2c55;
-  letter-spacing: -0.01em;
-}
-
-.t-text{
-  margin: 0;
-  color: rgba(0,0,0,.72);
-}
-
-/* Timeline image sizing */
-.t-media {
-  margin: 0.75rem 0 1rem;
-}
-
-.t-img {
-  width: 100%;
-  max-width: 280px;   /* 👈 controls image size */
-  height: auto;
-  display: block;
-  border-radius: 8px; /* optional, remove if you want sharp corners */
-}
-
-/* Soft accent CTA band */
-.soft-accent-band{
-  margin-top: 24px;
-  background: #efe6d5;
-  border: 1px solid rgba(0,0,0,.08);
-  border-radius: 18px;
-  padding: 18px 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.soft-accent-title{
-  font-weight: 900;
-  color: #0b2c55;
-  margin-bottom: 4px;
-}
-
-.soft-accent-sub{
-  color: rgba(0,0,0,.68);
-}
-
-/* Animations */
-@media (prefers-reduced-motion: no-preference){
-  .t-card{
-    opacity: 0;
-    transform: translateY(10px);
-    animation: fadeUp .55s ease forwards;
-  }
-  .t-item:nth-child(2) .t-card{ animation-delay: .06s; }
-  .t-item:nth-child(3) .t-card{ animation-delay: .12s; }
-  .t-item:nth-child(4) .t-card{ animation-delay: .18s; }
-}
-
-@keyframes fadeUp{
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive */
-@media (max-width: 720px){
-  .timeline{ padding-left: 18px; }
-  .timeline::before{ left: 7px; }
-  .t-item{ grid-template-columns: 18px 1fr; }
-  .t-marker{ width: 14px; height: 14px; }
-}
-
-/* FORCE smaller images inside timeline cards */
-.timeline .t-card .t-media {
-  max-width: 360px;     /* change size here */
-}
-
-.timeline .t-card .t-media img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0.75rem auto 1rem;
-}
-
-/* CONTACT PAGE ONLY — force 2x2 grid */
-.contact-page .goals-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-/* Mobile fallback */
-@media (max-width: 720px) {
-  .contact-page .goals-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* CONTACT PAGE — portrait-style headshots */
-.contact-page .goal-img {
-  height: 320px;              /* 👈 taller = portrait */
-  background: #e9e4d9;
-  border-bottom: 1px solid rgba(0,0,0,.06);
-  height: 360px;
-}
-
-.contact-page .goal-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;          /* fills container */
-  object-position: center top;/* keeps face higher in frame */
-}
-
-/* DONATE PAGE — force 2x2 grid */
-.donate-page .goals-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-/* Mobile: stack cleanly */
-@media (max-width: 720px) {
-  .donate-page .goals-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Make donation tiles feel more action-oriented */
-.donate-page .goal-card p:last-child {
-  margin-bottom: 18px;
-}
-
-/* Center logos inside tiles */
-.donate-page .goal-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Normalize logo sizing */
-.donate-page .goal-img img {
-  width: 120px;
-  height: auto;
-  object-fit: contain;
-}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Hiraben Kodarbhai Foundation</title>
+    <meta name="description" content="Get in touch with the Hiraben Kodarbhai Foundation." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="contact-page">
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- SAME HEADER AS HOME/STORY -->
+    <header class="site-header" aria-label="Site header">
+      <div class="wrap nav-inner">
+        <nav class="nav-left" aria-label="Primary left">
+          <a class="nav-btn" href="stories.html">Story</a>
+          <a class="nav-btn" href="impact.html">Impact</a>
+        </nav>
+
+        <a class="logo" href="index.html" aria-label="HK Foundation Home">
+          <img src="logo.png" alt="HK Foundation logo" />
+        </a>
+
+        <nav class="nav-right" aria-label="Primary right">
+          <a class="nav-btn" href="contact.html" aria-current="page">Contact</a>
+          <a class="nav-btn" href="donate.html">Donate</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- SIMPLE PAGE HERO -->
+      <section class="page-hero" aria-label="Contact header">
+        <div class="wrap page-hero-inner">
+          <h1>Contact Us</h1>
+          <p class="page-hero-sub">
+            Questions, partnerships, volunteering, or support—reach out and we’ll get back to you.
+          </p>
+        </div>
+      </section>
+
+      <!-- CONTACT CARDS (same tile style as homepage goals) -->
+      <section class="goals" aria-label="Contact people">
+        <div class="wrap">
+          <h2 class="section-title">Who to contact</h2>
+
+          <div class="goals-grid" role="list">
+            <!-- Row 1 -->
+            <article class="goal-card contact-card" role="listitem">
+              <div class="goal-img contact-photo">
+                <img class="contact-photo-img" src="arp-patel.jpg" alt="Headshot of Arp Patel" />
+              </div>
+
+              <div class="contact-body">
+                <h3 class="contact-name">Arp Patel</h3>
+                <p class="contact-note">For inquiries in Iowa</p>
+                <p class="contact-email">
+                  <a href="mailto:arp@hkcommunity.org">arp@hkcommunity.org</a>
+                </p>
+              </div>
+            </article>
+
+            <article class="goal-card contact-card" role="listitem">
+              <div class="goal-img contact-photo">
+                <img class="contact-photo-img" src="manthan-patel.jpg" alt="Headshot of Manthan Patel" />
+              </div>
+
+              <div class="contact-body">
+                <h3 class="contact-name">Manthan Patel</h3>
+                <p class="contact-note">For inquiries in Iowa</p>
+                <p class="contact-email">
+                  <a href="mailto:manthan@hkcommunity.org">manthan@hkcommunity.org</a>
+                </p>
+              </div>
+            </article>
+
+            <!-- Row 2 -->
+            <article class="goal-card contact-card" role="listitem">
+              <div class="goal-img contact-photo">
+                <img class="contact-photo-img" src="jay-patel.jpg" alt="Headshot of Jay Patel" />
+              </div>
+
+              <div class="contact-body">
+                <h3 class="contact-name">Jay Patel</h3>
+                <p class="contact-note">For inquiries in Ohio</p>
+                <p class="contact-email">
+                  <a href="mailto:jay@hkcommunity.org">jay@hkcommunity.org</a>
+                </p>
+              </div>
+            </article>
+
+            <article class="goal-card contact-card" role="listitem">
+              <div class="goal-img contact-photo">
+                <img class="contact-photo-img" src="aryan-patel.jpg" alt="Headshot of Aryan Patel" />
+              </div>
+
+              <div class="contact-body">
+                <h3 class="contact-name">Aryan Patel</h3>
+                <p class="contact-note">For inquiries in Ohio</p>
+                <p class="contact-email">
+                  <a href="mailto:aryan@hkcommunity.org">aryan@hkcommunity.org</a>
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- CTA BAND (same style used on story page) -->
+          <div class="soft-accent-band" aria-label="Contact call to action">
+            <div>
+              <div class="soft-accent-title">Not sure who to email?</div>
+              <div class="soft-accent-sub">Send a note to our general inbox and we’ll route it.</div>
+            </div>
+            <a class="btn-primary" href="mailto:info@hkcommunity.org">Email us</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER (same as other pages) -->
+      <footer class="site-footer" aria-label="Footer">
+        <div class="wrap footer-grid">
+          <div class="footer-col">
+            <h3 class="footer-title">Hiraben Kodarbhai Foundation</h3>
+            <p class="footer-item">NO NUMBER YET</p>
+            <p class="footer-item"><a href="mailto:info@hkcommunity.org">info@hkcommunity.org</a></p>
+          </div>
+
+          <div class="footer-col">
+            <p class="footer-item">Cincinnati, OH &amp; Waterloo, IA,</p>
+            <p class="footer-item">Logan Ave, Waterloo, IA</p>
+
+            <div class="social">
+              <a href="#" aria-label="Facebook">Facebook</a>
+              <a href="#" aria-label="Instagram">Instagram</a>
+            </div>
+          </div>
+
+          <div class="footer-col footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Accessibility Statement</a>
+            <a href="#">Terms &amp; Conditions</a>
+            <a href="#">Refund Policy</a>
+          </div>
+        </div>
+
+        <div class="wrap footer-bottom">
+          <small>© <span id="y"></span> by Hiraben Kodarbhai Foundation. All rights reserved.</small>
+        </div>
+
+        <script>
+          document.getElementById("y").textContent = new Date().getFullYear();
+        </script>
+      </footer>
+    </main>
+  </body>
+</html>
