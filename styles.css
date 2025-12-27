@@ -821,3 +821,42 @@ a{ color: inherit; text-decoration: none; }
 .contact-page .goal-card p:last-child{
   margin-bottom: 0;
 }
+
+/* Mobile nav fix: keep logo on top, all buttons under it (no split above/below) */
+@media (max-width: 720px) {
+  .nav-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logo logo"
+      "left right";
+    align-items: center;
+    gap: 10px 12px;
+  }
+
+  .logo {
+    grid-area: logo;
+    justify-self: center;
+  }
+
+  .nav-left {
+    grid-area: left;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+  }
+
+  .nav-right {
+    grid-area: right;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+  }
+
+  /* Optional: make buttons a bit smaller so they fit cleaner */
+  .nav-btn {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+}
