@@ -776,3 +776,48 @@ a{ color: inherit; text-decoration: none; }
   height: auto;
   object-fit: contain;
 }
+
+/* =========================
+   CONTACT PAGE — Team-style cards (square photos)
+   Paste at BOTTOM of styles.css
+   ========================= */
+
+/* Keep your 2x2 grid (already set), just tighten alignment */
+.contact-page .goal-card{
+  text-align: center;
+  padding: 18px 16px 16px;
+}
+
+/* Override the current contact portrait banner-style image */
+.contact-page .goal-img{
+  width: 140px;              /* square size */
+  height: 140px;
+  margin: 10px auto 14px;
+  border-radius: 18px;        /* rounded edges */
+  overflow: hidden;
+  background: #e9e4d9;
+  border: 1px solid rgba(11,27,58,.12);
+  display: block;             /* override flex from donate page */
+}
+
+/* Make sure the image fills the square nicely */
+.contact-page .goal-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Clean, consistent spacing like the example */
+.contact-page .goal-card h3{
+  margin: 6px 0 6px;
+}
+
+.contact-page .goal-card p{
+  margin: 0 0 10px;
+}
+
+/* Email line slightly tighter */
+.contact-page .goal-card p:last-child{
+  margin-bottom: 0;
+}
